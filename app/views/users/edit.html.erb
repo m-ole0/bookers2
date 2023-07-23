@@ -1,19 +1,20 @@
-<h1>User info</h1>
-<div>
-Name
-text_field ユーザー名
-</div>
-
-<div>
-Image
-画像選択
-</div>
-
-<div>
-Introduction
-text.area
-</div>
-
-<div>
-Update Userボタン
+<div class="container">
+  <div class="row">
+    <div>
+    <h2>User info</h2>
+      <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <%= form_with model: @user do |f| %>
+      <div>Name</div>
+        <%= f.text_field :name %>
+      <div>Image</div>
+        <%= f.file_field :profile_image %>
+      <div>Introduction</div>
+        <%= f.text_area :introduction %>
+      <div>
+        <%= f.submit 'Update User' %>
+      </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
 </div>
