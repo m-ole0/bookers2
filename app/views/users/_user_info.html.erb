@@ -1,7 +1,6 @@
 
 
 <h2>User info</h2>
-
 <div>
   <% if user.profile_image.attached? %>
     <%= image_tag user.profile_image, size: "100x100", class: "profile-image" %>
@@ -17,8 +16,9 @@
   <strong>introduction</strong><%= user.introduction.present? ? user.introduction : "" %>
 </div>
 
+
 <div>
-  <%= link_to edit_user_path(user.id), class: "btn btn-secondary" do %>
-  <i class="fa-solid fa-user-gear"></i>
+  <%= link_to edit_user_path(user.id), class: "btn btn-outline-secondary btn-block" do %>
+  <i class="fas fa-user-cog" aria-hidden="true"></i>
   <% end %>
 </div>
